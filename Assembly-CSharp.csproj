@@ -48,6 +48,8 @@
   <ItemGroup>
      <Compile Include="Assets\Source\CameraJugador.cs" />
      <Compile Include="Assets\Source\CameraRotate.cs" />
+     <Compile Include="Assets\Source\InterpolateTranslateLeft.cs" />
+     <Compile Include="Assets\Source\Interpolator.cs" />
      <Compile Include="Assets\Source\Lightning.cs" />
      <Compile Include="Assets\Source\LightningEmmiter.cs" />
      <Compile Include="Assets\Source\LightningProcedural.cs" />

@@ -2,4 +2,5 @@ bin/
 temp/
 Temp/
 Bin/
-Library
+Library/
+obj/

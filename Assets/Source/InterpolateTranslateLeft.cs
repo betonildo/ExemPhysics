@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class InterpolateTranslateLeft : MonoBehaviour {
+public class InterpolateTranslateLeft: MonoBehaviour {
 
 	public Button menuAccessButton;
 	public float speed = 10f;

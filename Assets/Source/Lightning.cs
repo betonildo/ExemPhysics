@@ -6,6 +6,7 @@ public class Lightning : MonoBehaviour {
 
 	float m_offset = 0.0f;
 	float m_speed = 0.0f;
+	float m_walkSpeed = 0.1f;
 	float percentage = 0.0f;
 	GameObject lightningObject;
 
@@ -18,6 +19,10 @@ public class Lightning : MonoBehaviour {
 
 	public void setSpeed(float speed) {
 		m_speed = speed;
+	}
+
+	public void setWalkSpeed(float walkSpeed) {
+		m_walkSpeed = walkSpeed;
 	}
 
 	// Update is called once per frame
@@ -47,12 +52,12 @@ public class Lightning : MonoBehaviour {
 		while (true) {
 			percentage = 0.0f;
 			Quaternion current = gameObject.transform.localRotation;
-			Quaternion next = Random.rotation;//Quaternion.Euler(gameObject.transform.localRotation.eulerAngles * 2.0f);
+			Quaternion next = Random.rotation;
 
 			while (percentage < 1.0f) {
-				Debug.Log ("Running... " + percentage);
+				
 				Quaternion pace = Quaternion.Slerp (current, next, percentage);
-				percentage += 0.1f * Time.deltaTime;
+				percentage += m_walkSpeed * Time.deltaTime;
 				transform.localRotation = pace;
 
 				yield return null;
